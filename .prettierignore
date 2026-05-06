@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Generated artifacts
+generated/
+playwright-report/
+
+# Tooling & IDE configs — not project source code
+.github/
+.vscode/
+
+# Markdown files
+**/*.md

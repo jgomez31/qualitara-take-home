@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // Language & Environment
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    // Module resolution
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+
+    // Type checking strictness
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Code quality
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Type roots
+    "types": ["node"],
+
+    // Interop / emit
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["tests/**/*.ts", "playwright.config.ts"],
+  "exclude": ["node_modules", "generated", "playwright-report", "tests/seed.spec.ts"]
+}

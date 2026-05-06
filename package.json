@@ -1,0 +1,33 @@
+{
+  "name": "qualitara-take-home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:check": "eslint --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "type:check": "tsc --noEmit",
+    "prettier:check": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "check": "npm run prettier:check && npm run lint:check && npm run type:check && npm outdated && npm audit",
+    "show:trace": "playwright show-trace --",
+    "update": "npx -y npm-check -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.10.2",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
+  }
+}
