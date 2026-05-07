@@ -161,3 +161,5 @@ This project was set up with a three-agent AI workflow powered by GitHub Copilot
 - **Page Object Model scaffolding**: AI assistance was used to generate the initial page object classes under `pages/` (e.g., `LoginPage.ts`, `CheckboxesPage.ts`, `DynamicLoadingPage.ts`), following the project's locator priority conventions.
 
 - **Configuration and tooling**: The `playwright.config.ts`, ESLint config, Prettier config, `tsconfig.json` and dotenv were set up with AI assistance to enforce consistent code style and type safety across the project.
+
+- **Review and assistance**: Used Github Copilot agents to avoid manual and time consuming tasks in general, like codebase review to identify inconsistencies or missing documentation, review dependencies and action versions, converting .ai-sessions Chats from JSON to markdown files.
