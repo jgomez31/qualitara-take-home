@@ -6,7 +6,7 @@ import prettierConfig from 'eslint-config-prettier';
 export default [
   // Verify files to ignore
   {
-    ignores: ['playwright-report/**', 'generated/**', 'node_modules/**'],
+    ignores: ['playwright-report/**', 'generated/**', 'node_modules/**', '.playwright-mcp/**'],
   },
 
   // --- TypeScript rules (applied to all TS files) ---

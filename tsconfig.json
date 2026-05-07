@@ -32,5 +32,11 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["tests/**/*.ts", "playwright.config.ts"],
-  "exclude": ["node_modules", "generated", "playwright-report", "tests/seed.spec.ts"]
+  "exclude": [
+    "node_modules",
+    "generated",
+    "playwright-report",
+    "tests/seed.spec.ts",
+    ".playwright-mcp"
+  ]
 }

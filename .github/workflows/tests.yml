@@ -38,9 +38,7 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
-        path: |
-          playwright-report/
-          generated/results/
+        path: generated/
         retention-days: 30
     - name: Save dependencies cache
       id: cache-save

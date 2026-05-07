@@ -9,16 +9,16 @@ dotenv.config({ path: path.resolve(__dirname, '.env.local'), override: true });
  * See https://playwright.dev/docs/test-configuration.
  */ export default defineConfig({
   testDir: './tests',
+  testIgnore: '**/seed.spec.ts',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 1,
   workers: 3,
   outputDir: 'generated/results',
-  reporter: [['html', { open: 'never' }]],
+  reporter: [['html', { open: 'never', outputFolder: 'generated/report' }]],
   /* Shared settings for all the projects below. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'http://folderit.net',
+    baseURL: 'https://the-internet.herokuapp.com/',
 
     trace: 'retain-on-failure',
     screenshot: {
@@ -31,7 +31,12 @@ dotenv.config({ path: path.resolve(__dirname, '.env.local'), override: true });
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        launchOptions: {
+          args: ['--disable-dev-shm-usage'],
+        },
+      },
     },
 
     {
