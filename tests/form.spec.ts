@@ -2,9 +2,13 @@
 
 import { expect } from '@playwright/test';
 import { test } from '../fixtures/fixture';
-import { checkboxesStatus } from '../constants/checkboxes';
 
-test.describe('Checkboxes test cases', () => {
+test.describe.only('Checkboxes test cases', () => {
+  const checkboxesStatus = {
+    'checkbox 1': false,
+    'checkbox 2': true,
+  };
+
   test('Initial page state', async ({ checkboxesPage }) => {
     // 1. Check the amount of checkboxes initially displayed matches the expected based on constants length
     await expect(checkboxesPage.checkboxes).toHaveCount(Object.keys(checkboxesStatus).length);

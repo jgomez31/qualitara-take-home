@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { test } from '../fixtures/fixture';
 import { styles } from '../constants/styles';
 
-test.describe('Login Test cases', () => {
+test.describe.only('Login Test cases', () => {
   if (!process.env.PASSWORD || !process.env.USERNAME) {
     throw new Error('USERNAME and PASSWORD environment variables must be set');
   }
@@ -12,7 +12,7 @@ test.describe('Login Test cases', () => {
       description: 'Invalid username login',
       username: 'invalid',
       password: process.env.PASSWORD,
-      message: 'Your credentials are invalid!',
+      message: 'Your username is invalid!',
       color: styles.errorColor,
       title: 'Login Page',
     },
@@ -20,7 +20,7 @@ test.describe('Login Test cases', () => {
       description: 'Invalid password login',
       username: process.env.USERNAME,
       password: 'invalid',
-      message: 'Your credentials are invalid!',
+      message: 'Your password is invalid!',
       color: styles.errorColor,
       title: 'Login Page',
     },
