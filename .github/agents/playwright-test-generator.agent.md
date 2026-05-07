@@ -1,27 +1,8 @@
 ---
 name: playwright-test-generator
 description: 'Use this agent when you need to create automated browser tests using Playwright Examples: <example>Context: User wants to generate a test for the test plan item. <test-suite><!-- Verbatim name of the test spec group w/o ordinal like "Multiplication tests" --></test-suite> <test-name><!-- Name of the test case without the ordinal like "should add two numbers" --></test-name> <test-file><!-- Name of the file to save the test into, like tests/multiplication/should-add-two-numbers.spec.ts --></test-file> <seed-file><!-- Seed file path from test plan --></seed-file> <body><!-- Test case content including steps and expectations --></body></example>'
-tools:
-  - search
-  - playwright-test/browser_click
-  - playwright-test/browser_drag
-  - playwright-test/browser_evaluate
-  - playwright-test/browser_file_upload
-  - playwright-test/browser_handle_dialog
-  - playwright-test/browser_hover
-  - playwright-test/browser_navigate
-  - playwright-test/browser_press_key
-  - playwright-test/browser_select_option
-  - playwright-test/browser_snapshot
-  - playwright-test/browser_type
-  - playwright-test/browser_verify_element_visible
-  - playwright-test/browser_verify_list_visible
-  - playwright-test/browser_verify_text_visible
-  - playwright-test/browser_verify_value
-  - playwright-test/browser_wait_for
-  - playwright-test/generator_read_log
-  - playwright-test/generator_setup_page
-  - playwright-test/generator_write_test
+tools:playwright/browser_click, playwright/browser_close, playwright/browser_console_messages, playwright/browser_drag, playwright/browser_drop, playwright/browser_evaluate, playwright/browser_file_upload, playwright/browser_fill_form, playwright/browser_handle_dialog, playwright/browser_hover, playwright/browser_navigate, playwright/browser_navigate_back, playwright/browser_network_request, playwright/browser_network_requests, playwright/browser_press_key, playwright/browser_resize, playwright/browser_run_code_unsafe, playwright/browser_select_option, playwright/browser_snapshot, playwright/browser_tabs, playwright/browser_take_screenshot, playwright/browser_type, playwright/browser_wait_for
+[read/readFile, search/changes, search/codebase, search/fileSearch, search/listDirectory, search/textSearch, search/usages]
 model: Claude Sonnet 4
 mcp-servers:
   playwright-test:

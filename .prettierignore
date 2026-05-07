@@ -11,3 +11,6 @@ playwright-report/
 
 # Markdown files
 **/*.md
+
+# Ignore AI Usage Chats JSON
+.ai-sessions/

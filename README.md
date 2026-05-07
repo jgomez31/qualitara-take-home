@@ -25,7 +25,13 @@ npx playwright install --with-deps
 
 This installs the Chromium and Firefox browser binaries used by the test suite.
 
-### 3. Run the tests
+### 3. Set up .env file
+
+Create a copy of .env file named .env.local file within the repository root and set a valid username and password in that file.
+
+In Github Actions these values should be set in the Repository's Settings page, under 'Secrets and variables' > 'Actions'.
+
+### 4. Run the tests
 
 Run the full suite across all configured browsers (Chromium + Firefox):
 
@@ -46,7 +52,7 @@ npx playwright test --project=chromium
 npx playwright test --project=firefox
 ```
 
-### 4. Test artifacts
+### 5. Test artifacts
 
 All artifacts are written to `generated/results/` after a test run.
 

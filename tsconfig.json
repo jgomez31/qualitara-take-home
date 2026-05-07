@@ -37,6 +37,7 @@
     "generated",
     "playwright-report",
     "tests/seed.spec.ts",
-    ".playwright-mcp"
+    ".playwright-mcp",
+    ".ai-sessions"
   ]
 }
