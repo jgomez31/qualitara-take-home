@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import { test } from '../fixtures/fixture';
 import { styles } from '../constants/styles';
 
-test.describe.only('Login Test cases', () => {
+test.describe('Login Test cases', () => {
   if (!process.env.PASSWORD || !process.env.USERNAME) {
     throw new Error('USERNAME and PASSWORD environment variables must be set');
   }

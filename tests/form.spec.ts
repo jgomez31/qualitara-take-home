@@ -3,7 +3,7 @@
 import { expect } from '@playwright/test';
 import { test } from '../fixtures/fixture';
 
-test.describe.only('Checkboxes test cases', () => {
+test.describe('Checkboxes test cases', () => {
   const checkboxesStatus = {
     'checkbox 1': false,
     'checkbox 2': true,
